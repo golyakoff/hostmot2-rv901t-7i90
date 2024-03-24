@@ -79,14 +79,14 @@ use work.FixICap.all;
 
 
 -------------------- select one card type------------------------------
-use work.@Card@.all;
+use work.i90_x9card.all;
 
 --use work.i90_x9card.all;      -- needs 7i90spi.ucf and SP6 x9 144 pin
 --use work.c80_x9card.all;        -- needs 7c80spi.ucf and SP6 x9 144 pin
 --use work.c81_x9card.all;        -- needs 7c81spi.ucf and SP6 x9 144 pin
 
 -----------------------------------------------------------------------
---use work.@Pin@.all;
+use work.PIN_JUSTIO_72.all;
 
 --72 pin pinouts for 7I90
 --use work.PIN_JUSTIO_72.all;
@@ -316,9 +316,9 @@ ahostmot2: entity work.HostMot2
    generic map (
       CLKDV_DIVIDE => 2.0,
       CLKFX_DIVIDE => 2, 
-      CLKFX_MULTIPLY => 8,			-- 8 FOR 200 MHz
+      CLKFX_MULTIPLY => 16,			-- 8 original >> 16 for RV901T
       CLKIN_DIVIDE_BY_2 => FALSE, 
-      CLKIN_PERIOD => 20.0,          
+      CLKIN_PERIOD => 40.0,         -- 20 original >> 40 for RV901T 
       CLKOUT_PHASE_SHIFT => "NONE", 
       CLK_FEEDBACK => "1X",         
       DESKEW_ADJUST => "SYSTEM_SYNCHRONOUS", 
@@ -351,9 +351,9 @@ ahostmot2: entity work.HostMot2
    generic map (
       CLKDV_DIVIDE => 2.0,
       CLKFX_DIVIDE => 2, 
-      CLKFX_MULTIPLY => 4,			-- 4 FOR 100 MHz
+      CLKFX_MULTIPLY => 8,			-- 4 original >> 8 for RV901T
       CLKIN_DIVIDE_BY_2 => FALSE, 
-      CLKIN_PERIOD => 20.0,          
+      CLKIN_PERIOD => 40.0,         -- 20 original >> 40 for RV901T
       CLKOUT_PHASE_SHIFT => "NONE", 
       CLK_FEEDBACK => "1X",         
       DESKEW_ADJUST => "SYSTEM_SYNCHRONOUS", 

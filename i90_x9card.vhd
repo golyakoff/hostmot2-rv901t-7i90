@@ -75,8 +75,8 @@ package i90_x9card is
 		constant ClockLow: integer := ClockLow90;
 		constant BoardNameLow : std_Logic_Vector(31 downto 0) := BoardNameMESA;
 		constant BoardNameHigh : std_Logic_Vector(31 downto 0) := BoardName7I90;
-		constant FPGASize: integer := 9;
-		constant FPGAPins: integer := 144;
+		constant FPGASize: integer := 16;
+		constant FPGAPins: integer := 256;
 		constant IOPorts: integer := 3;
 		constant IOWidth: integer := 72;
 		constant PortWidth: integer := 24;
@@ -85,3 +85,4 @@ package i90_x9card is
 		constant	SepClocks: boolean := true;
 		constant OneWS: boolean := false;
 end package i90_x9card;
+
