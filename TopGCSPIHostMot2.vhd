@@ -86,7 +86,7 @@ use work.i90_x9card.all;
 --use work.c81_x9card.all;        -- needs 7c81spi.ucf and SP6 x9 144 pin
 
 -----------------------------------------------------------------------
-use work.PIN_JUSTIO_72.all;
+use work.PIN_AGO_72.all;
 
 --72 pin pinouts for 7I90
 --use work.PIN_JUSTIO_72.all;
